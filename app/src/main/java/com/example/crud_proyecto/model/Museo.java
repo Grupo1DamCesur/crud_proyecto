@@ -5,7 +5,6 @@ import java.util.List;
 public class Museo {
     private String uid;
     private String name;
-    private String category;
     private String descripcion;
     private String telefono;
     private String web;
@@ -33,14 +32,6 @@ public class Museo {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
     }
 
     public String getDescripcion() {
