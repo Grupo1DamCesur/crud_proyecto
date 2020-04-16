@@ -2,9 +2,11 @@ package com.example.crud_proyecto;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.view.Display;
+import android.view.View;
 import android.widget.Button;
 
 import java.util.ArrayList;
@@ -66,12 +68,110 @@ public class MainActivity extends AppCompatActivity {
         buttonList.add(btnTransporte);
         buttonList.add(btnExtra);
 
+        final Intent intentPlayas = new Intent(this, PlayasActivity.class);
+        final Intent intentAlojamiento = new Intent(this, AlojamientoActivity.class);
+        final Intent intentInformacion = new Intent(this, InformacionActivity.class);
+        final Intent intentLuxury = new Intent(this, LuxuryActivity.class);
+        final Intent intentMonumento = new Intent(this, MonumentoActivity.class);
+        final Intent intentMuseo = new Intent(this, MuseoActivity.class);
+        final Intent intentNaturaleza = new Intent(this, NaturalezaActivity.class);
+        final Intent intentOtros = new Intent(this, OtrosActivity.class);
+        final Intent intentRestaurante = new Intent(this, RestauranteActivity.class);
+        final Intent intentShopping = new Intent(this, ShoppingActivity.class);
+        final Intent intentTransporte = new Intent(this, TransporteActivity.class);
+
         for(Button btn: buttonList){
             btn.setHeight(buttonHeight);
             btn.setWidth(buttonWidth);
         }
 
+        btnPlaya.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intentPlayas.putExtra("nameIntent", "Playas");
+                startActivity(intentPlayas);
+            }
+        });
 
+        btnAlojamiento.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intentAlojamiento.putExtra("nameIntent", "Alojamientos");
+                startActivity(intentAlojamiento);
+            }
+        });
+
+        btnInformacion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intentInformacion.putExtra("nameIntent", "Puntos de información");
+                startActivity(intentInformacion);
+            }
+        });
+
+        btnLuxury.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intentLuxury.putExtra("nameIntent", "Luxury");
+                startActivity(intentLuxury);
+            }
+        });
+
+        btnMonumento.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intentMonumento.putExtra("nameIntent", "Monumentos");
+                startActivity(intentMonumento);
+            }
+        });
+
+        btnMuseo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intentMuseo.putExtra("nameIntent", "Museos");
+                startActivity(intentMuseo);
+            }
+        });
+
+        btnNaturaleza.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intentNaturaleza.putExtra("nameIntent", "Naturaleza");
+                startActivity(intentNaturaleza);
+            }
+        });
+
+        btnOtros.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intentOtros.putExtra("nameIntent", "Otros");
+                startActivity(intentOtros);
+            }
+        });
+
+        btnRestaurante.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intentRestaurante.putExtra("nameIntent", "Restaurantes");
+                startActivity(intentRestaurante);
+            }
+        });
+
+        btnShopping.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intentShopping.putExtra("nameIntent", "Shopping");
+                startActivity(intentShopping);
+            }
+        });
+
+        btnTransporte.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intentTransporte.putExtra("nameIntent", "Transportes");
+                startActivity(intentTransporte);
+            }
+        });
 
 
     }
